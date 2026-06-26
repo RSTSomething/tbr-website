@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Rotation | The Brownie Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="live-banner">
+    <div class="pulse-dot"></div> OVEN STATUS: SCENT ALERTS ACTIVE — TODAY'S SMALL BATCH ROTATION BAKE IS FRESHLY OUT!
+  </div>
+  <header>
+    <div class="logo" onclick="window.location.href='index.html'">The Brownie Bar</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Our Brownies</a>
+      <a href="signup.html">Join the Club</a>
+      <!-- Add inside your <nav> or header navigation link row -->
+      <a href="cart.html"
+        style="position: relative; font-weight: bold; background: var(--primary); color: #fff; padding: 6px 12px; border-radius: 20px; display: inline-flex; align-items: center; gap: 6px; text-decoration: none;">
+        🛒 Cart
+        <span id="cartCounterBadge" style="background: red; color: white; font-size: 0.75rem; font-weight: bold; padding: 2px 6px; border-radius: 10px; min-width: 14px; text-align: center; display: none;">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main style="flex: 1;">
+    <h2 class="section-title">This Week's Fresh Rotation</h2>
+    <div class="grid">
+      <!-- Original -->
+      <div class="card">
+        <img src="brownies_0.webp" class="card-img" alt="The Original Fudgy">
+        <div class="card-content">
+          <h3>The Original Fudgy</h3>
+          <p>Rich, dense, dark chocolate perfection loaded with structural chips.</p>
+          <span class="availability-tag">Loading...</span>
+          <a href="product-original.html" class="btn" aria-label="View details for The Original Fudgy">View Slice
+            Details</a>
+        </div>
+      </div>
+      <!-- Caramel -->
+      <div class="card">
+        <img src="salted-caramel-stuffed-brownies_7a.webp" class="card-img" alt="Salted Caramel Stuffed">
+        <div class="card-content">
+          <h3>Salted Caramel Stuffed</h3>
+          <p>Layered with sticky, house-made salted caramel candy reduction sauce.</p>
+          <span class="availability-tag">Loading...</span>
+          <a href="product-caramel.html" class="btn" aria-label="View details for Salted Caramel Stuffed">View Slice
+            Details</a>
+        </div>
+      </div>
+      <!-- Nutella -->
+      <div class="card">
+        <img src="nutella-brownies_4.webp" class="card-img" alt="Nutella Dream">
+        <div class="card-content">
+          <h3>Nutella Dream</h3>
+          <p>Thick swirls of pure hazelnut cocoa spread baked directly inside.</p>
+          <span class="availability-tag">Loading...</span>
+          <a href="product-nutella.html" class="btn" aria-label="View details for Nutella Dream">View Slice Details</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>&copy; 2026 The Brownie Bar. Handcrafted Decadence.</footer>
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Scroll back to top">↑</a>
+  <script src="app.js"></script>
+</body>
+
+</html>
