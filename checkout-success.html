@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed | The Brownie Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo" onclick="window.location.href='index.html'">The Brownie Bar</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Our Brownies</a>
+    </nav>
+  </header>
+
+  <main style="max-width: 500px; margin: 40px auto; text-align: center; padding: 0 20px; flex: 1;">
+    <!-- Pulsing Skeleton Placeholder Screen -->
+    <div id="loadingSkeleton" class="skeleton-container">
+      <div class="skeleton-line hero"></div>
+      <div class="skeleton-line mid"></div>
+      <div class="skeleton-line short"></div>
+      <div class="skeleton-line"></div>
+    </div>
+
+    <!-- Target Invoice Target Reveal Screen Container -->
+    <div id="successContent" style="display: none;">
+      <h2 style="color: var(--success); margin-bottom: 5px;">✨ Secure Purchase Complete ✨</h2>
+      <p style="margin-top: 0; color: #55433c;">Your fresh gourmet brownie batch is locked in.</p>
+
+      <div class="invoice-box">
+        <div class="invoice-row">
+          <strong>Invoice To:</strong>
+          <span id="invoiceEmail" style="color: var(--accent); font-weight: 600;"></span>
+        </div>
+        <div class="invoice-row" style="align-items: center; margin-top: 15px;">
+          <span>Order Reference Code:</span>
+          <button class="copy-badge" id="copyIdBtn" title="Click to copy ID">
+                        <span id="orderIdText">BB-73912-BRWN</span> 📋 Copy
+                    </button>
+        </div>
+        
+        <!-- Replace your single item line section with this cleaner list block -->
+        <div class="invoice-summary-box"
+          style="border-top: 1px dashed #ccc; border-bottom: 1px dashed #ccc; padding: 10px 0; margin: 10px 0;">
+          <strong style="display: block; margin-bottom: 6px; text-align: left;">📦 Ordered Items Breakdown:</strong>
+          <ul id="invoiceItemsSummaryList" style="list-style: none; padding: 0; margin: 0;">
+            <!-- Multi-item list nodes injected dynamically by app.js loop -->
+          </ul>
+        </div>
+
+        <hr style="border: 0; border-top: 2px solid #f2ede6; margin: 20px 0;">
+
+        <!-- Computational Component Matrix Elements -->
+        <div class="invoice-row">
+          <span>Gourmet Brownie Slice:</span>
+          <span id="calcSubtotal"></span>
+        </div>
+        <div class="invoice-row">
+          <span>Estimated Sales Tax (10%):</span>
+          <span id="calcTax"></span>
+        </div>
+        <div class="invoice-row invoice-total">
+          <span>Total Bill:</span>
+          <span id="calcTotal"></span>
+        </div>
+        <div class="invoice-row">
+          <strong>Stall Fast-Pass Day:</strong>
+          <span id="invoicePickup" style="font-weight: bold; color: var(--success);"></span>
+        </div>
+        <p style="font-size: 0.85rem; color: #7a6152; margin: 10px 0 0 0; text-align: left; line-height: 1.4;">
+          💡 <strong>How to claim:</strong> Come directly to our $20 Boss stall on your selected day, show this screen or give
+          your name/email, pay at the counter, and take your fresh slice instantly!
+        </p>
+      </div>
+      <div style="display: flex; gap: 15px; justify-content: center; max-width: 450px; margin: 20px auto 0 auto;">
+        <a href="menu.html" class="btn" style="margin: 0; flex: 1;" aria-label="Return to product listing matrix">Order More
+          Flavors</a>
+        <button id="printInvoiceBtn" class="btn" style="margin: 0; flex: 1; background-color: var(--accent);" aria-label="Print Invoice Receipt">Print Invoice</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>&copy; 2026 The Brownie Bar. Handcrafted Decadence.</footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
