@@ -1,0 +1,414 @@
+/* Core Color System & Theme Settings */
+:root {
+    --primary: #4A2E2B;
+    --secondary: #F5E6D3;
+    --accent: #8B5A2B;
+    --text: #2C1A11;
+    --success: #2E7D32;
+    --error: #C62828;
+    --card-bg: #FFFFFF;
+}
+
+/* Custom Themed Scrollbar */
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: var(--primary) var(--secondary);
+    scrollbar-width: thin;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--secondary);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Navbar Rules */
+header {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+nav a {
+    color: var(--secondary);
+    text-decoration: none;
+    margin-left: 15px;
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2rem;
+    margin: 30px 0;
+}
+
+/* Grid & Layered Soft Shadow Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+/* Micro-interaction Scale Trigger */
+.card:hover {
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Centered Pill Tags */
+.availability-tag {
+    display: block;
+    width: fit-content;
+    margin: 12px auto;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.available {
+    background-color: var(--success);
+}
+
+.unavailable {
+    background-color: var(--error);
+}
+
+/* Pricing Display Elements */
+.price-container {
+    margin: 15px 0;
+    font-size: 1.25rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #7a6152;
+    margin-right: 8px;
+}
+
+.current-price {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.price-suffix {
+    font-size: 1rem;
+    color: var(--text);
+    margin-left: 4px;
+}
+
+/* Form inputs & Details Layout Wrapper */
+.product-layout {
+    background: var(--card-bg);
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.product-layout img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.form-group {
+    margin: 25px auto 15px auto;
+    max-width: 450px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccbdb0;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #faf8f5;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    outline: none;
+    background-color: white;
+}
+
+/* Zero Padding Buttons */
+.btn {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    margin: 15px auto 0 auto;
+    padding: 0;
+    line-height: 48px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+/* Invoice Box Component */
+.invoice-box {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 25px 0;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--primary);
+}
+
+.invoice-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.invoice-total {
+    font-size: 1.15rem;
+    font-weight: bold;
+    border-top: 2px dashed #e6dfd5;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+/* Loading Skeletons */
+.skeleton-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+}
+
+.skeleton-line {
+    background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 50%, #f2f2f2 75%);
+    background-size: 200% 100%;
+    animation: pulse-skeleton 1.5s infinite;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.skeleton-line.short {
+    width: 40%;
+}
+
+.skeleton-line.mid {
+    width: 75%;
+}
+
+.skeleton-line.hero {
+    height: 40px;
+}
+
+@keyframes pulse-skeleton {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Floating Top Tracker Toggle button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary);
+    color: var(--secondary);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, background-color 0.2s;
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+.copy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    background: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    font-family: monospace;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: var(--primary);
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+@media print {
+
+    /* Hide the navbar, buttons, footer, and back-to-top tracking circle */
+    header,
+    footer,
+    .btn,
+    .back-to-top,
+    #copyIdBtn,
+    p {
+        display: none !important;
+    }
+
+    /* Force a clean white background for printing paper */
+    body {
+        background-color: white !important;
+    }
+
+    /* Expand the invoice block nicely on the page */
+    .invoice-box {
+        border: 1px solid #e6dfd5;
+        box-shadow: none;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
+
+.live-banner {
+    background-color: #E65100;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #39FF14;
+    border-radius: 50%;
+    animation: simplePulse 1.5s infinite;
+}
+
+@keyframes simplePulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.9);
+        opacity: 0.4;
+    }
+}
+
+/* Active/Hovered Gold Star Accent */
+.star-node.active-star {
+    color: #E65100 !important;
+}
+
+/* Subtle scaling pop effect when touching stars */
+.star-node {
+    display: inline-block;
+    transition: transform 0.1s ease, color 0.1s ease;
+}
+
+.star-node:hover {
+    transform: scale(1.2);
+}
