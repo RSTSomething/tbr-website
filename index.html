@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Brownie Bar | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="live-banner">
+        <div class="pulse-dot"></div> OVEN STATUS: SCENT ALERTS ACTIVE — TODAY'S SMALL BATCH ROTATION BAKE IS FRESHLY
+        OUT!
+    </div>
+    <header>
+        <div class="logo" onclick="window.location.href='index.html'">The Brownie Bar</div>
+        <nav>
+            <a href="index.html" aria-label="Go to home page">Home</a>
+            <a href="menu.html" aria-label="View our sweet rotation menu">Our Brownies</a>
+            <a href="signup.html" aria-label="Join our rewards brownie club">Join the Club</a>
+        </nav>
+    </header>
+
+    <main style="text-align: center; padding: 50px 20px; flex: 1;">
+        <h1 style="color: var(--primary); font-size: 3rem; margin-top: 40px; margin-bottom: 10px;">Gourmet Small-Batch
+            Brownies</h1>
+        <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px;">
+            Handcrafted luxury baked fresh daily and delivered straight to your door.
+        </p>
+        <a href="menu.html" class="btn" style="max-width: 280px; margin: 0 auto;"
+            aria-label="View today's menu rotation">View Today's Rotation</a>
+    </main>
+
+    <!-- $20 Boss Venture Funding Goal Widget Layout -->
+    <div class="funding-widget-box"
+        style="padding: 15px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin: 20px auto; max-width: 600px;">
+        <strong style="display: block; margin-bottom: 5px; color: var(--primary);">📈 $20 Boss Venture Funding Goal</strong>
+
+        <!-- Background track of the bar -->
+        <div
+            style="width: 100%; background: #eee; height: 12px; border-radius: 6px; overflow: hidden; margin-bottom: 8px;">
+            <!-- The actual filled progress indicator line -->
+            <div id="fundingProgressBar"
+                style="width: 0%; background: #2e7d32; height: 100%; transition: width 1s ease-in-out;"></div>
+        </div>
+
+        <!-- The dynamic milestone text injector slot -->
+        <span id="fundingProgressText" style="font-size: 0.85rem; color: #555; font-weight: 500;">Baking our way to the first $20 repayment goal...</span>
+    </div>
+
+    <footer>&copy; 2026 The Brownie Bar. Handcrafted Decadence.</footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Scroll back to top">↑</a>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script>
+        // Runs automatically when the HTML elements are fully ready
+        document.addEventListener('DOMContentLoaded', () => {
+            // Change 45.50 to whatever total earnings you want to show!
+            updateFundingProgress(45.50);
+        });
+    </script>
+</body>
+
+</html>
